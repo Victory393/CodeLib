@@ -29,7 +29,7 @@ export default function CodeSnippetForm() {
         title,
         language,
         codeblock,
-        user_id: user.id,
+        user_id: user?.id,
       }
     ])
     if (error) {
