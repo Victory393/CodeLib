@@ -49,13 +49,13 @@ export default function CodeSnippetForm() {
     className='p-2 rounded-lg' />
 
     <select name="language" id="cars" className='p-2 rounded-lg'>
-      <option value="volvo">Python</option>
-      <option value="saab">JavaScript</option>
-      <option value="mercedes">Java</option>
-      <option value="audi">C++</option>
-      <option value="audi">C#</option>
-      <option value="audi">Rust</option>
-      <option value="audi">TypeScript</option>
+      <option value="Python">Python</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Java">Java</option>
+      <option value="C++">C++</option>
+      <option value="C#">C#</option>
+      <option value="Rust">Rust</option>
+      <option value="TypeScript ">TypeScript</option>
     </select>
 
 
