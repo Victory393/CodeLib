@@ -34,7 +34,7 @@ export default function CodeSnippetForm() {
   }
 
   return (
-    <form className='flex flex-1 flex-col gap-6 px-4 py-8 border border-white rounded-2xl w-full h-fit' action="">
+    <form ref={formRef} className='flex flex-1 flex-col gap-6 px-4 py-8 border border-white rounded-2xl w-full h-fit' action={handleSubmit}>
     <input 
     name='title' 
     type="text"
