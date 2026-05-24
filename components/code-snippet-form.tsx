@@ -3,7 +3,6 @@
 import { createClient } from "@/lib/supabase/client"
 import { useRef } from "react"
 import { useRouter } from "next/navigation"
-import { CodeBlock } from "./tutorial/code-block"
 import { create } from "domain"
 
 export default function CodeSnippetForm() {
