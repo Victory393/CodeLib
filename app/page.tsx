@@ -6,6 +6,7 @@ import { hasEnvVars } from "@/lib/utils";
 import Link from "next/link";
 import { Suspense } from "react";
 
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center">
@@ -18,7 +19,7 @@ export default function Home() {
             {!hasEnvVars ? (
               <EnvVarWarning />
             ) : (
-              <Suspense>
+              <Suspense fallback={<div>Loading...</div>}>
                 <AuthButton />
               </Suspense>
             )}
