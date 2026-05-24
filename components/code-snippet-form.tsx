@@ -17,11 +17,20 @@ export default function CodeSnippetForm() {
     const codeblock = formData.get('codeblock') as string
 
     const supabase = createClient()
+
+    const { data: { user }, error:  userError } = await supabase.auth.getUser()
+
+    if (!user || userError) {
+      alert("you must be logged in to save snippets")
+      return
+    }
+
     const { error } = await supabase.from('snippets').insert([
       {
         title,
         language,
-        codeblock
+        codeblock,
+        user_id: user.id
       }
     ])
     if (error) {
