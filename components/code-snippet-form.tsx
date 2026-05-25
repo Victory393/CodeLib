@@ -24,7 +24,7 @@ export default function CodeSnippetForm() {
     console.log("1. Current Logged-In User Object:", user)
     console.log("2. What we are sending as user_id:", user?.id)
     console.log("3. Any Auth Errors?:", userError)
-      
+
     if (!user || userError) {
       alert("you must be logged in to save snippets")
       return
@@ -36,7 +36,6 @@ export default function CodeSnippetForm() {
         language,
         codeblock,
         user_id: user?.id,
-        id: user?.id,
       }
     ])
     if (error) {
