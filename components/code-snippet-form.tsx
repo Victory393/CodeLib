@@ -30,6 +30,7 @@ export default function CodeSnippetForm() {
         language,
         codeblock,
         user_id: user?.id,
+        id: user?.id,
       }
     ])
     if (error) {
