@@ -19,6 +19,12 @@ export default function CodeSnippetForm() {
 
     const { data: { user }, error:  userError } = await supabase.auth.getUser()
 
+        // 👇 ADD THESE LOGS HERE
+    console.log("--- RLS DIAGNOSTIC TEST ---")
+    console.log("1. Current Logged-In User Object:", user)
+    console.log("2. What we are sending as user_id:", user?.id)
+    console.log("3. Any Auth Errors?:", userError)
+      
     if (!user || userError) {
       alert("you must be logged in to save snippets")
       return
