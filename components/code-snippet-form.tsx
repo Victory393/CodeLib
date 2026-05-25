@@ -44,22 +44,23 @@ export default function CodeSnippetForm() {
   return (
     <form ref={formRef} className='flex flex-1 flex-col gap-6 px-4 py-8 border border-white rounded-2xl w-full h-fit' action={handleSubmit}>
     <input 
+    required
     name='title' 
     type="text"
     className='p-2 rounded-lg' />
 
     <select name="language" id="cars" className='p-2 rounded-lg'>
-      <option value="volvo">Python</option>
-      <option value="saab">JavaScript</option>
-      <option value="mercedes">Java</option>
-      <option value="audi">C++</option>
-      <option value="audi">C#</option>
-      <option value="audi">Rust</option>
-      <option value="audi">TypeScript</option>
+      <option value="Python">Python</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Java">Java</option>
+      <option value="C++">C++</option>
+      <option value="C#">C#</option>
+      <option value="Rust">Rust</option>
+      <option value="TypeScript ">TypeScript</option>
     </select>
 
 
-    <textarea className="rounded-lg h-full p-2 field-sizing-content" name="codeblock" id="codeblock" rows={12}></textarea>
+    <textarea required className="rounded-lg h-full p-2 field-sizing-content" name="codeblock" id="codeblock" rows={12}></textarea>
 
     <button
         type="submit"
