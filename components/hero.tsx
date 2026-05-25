@@ -1,6 +1,5 @@
-import { NextLogo } from "./next-logo";
-import { SupabaseLogo } from "./supabase-logo";
 import { AuthButton } from "./auth-button";
+import { hasEnvVars } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -12,7 +11,7 @@ export function Hero() {
       <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
         Your personal, private, organized repository to retrieve reusable codes
       </p>
-      <AuthButton />
+      {hasEnvVars ? <AuthButton /> : null}
       <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
     </div>
   );
